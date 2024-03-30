@@ -1,0 +1,120 @@
+.related-items {
+    display: flex;
+    margin: 80px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.related-items h1 {
+    color: #171717;
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.related-items hr {
+    width: 270px;
+    border-radius: 10px;
+    background-color: #252525;
+    padding: 2px;
+}
+
+.related-items .related-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 320px);
+    gap: 30px;
+    justify-content: center;
+    margin: 80px auto;
+    width: 90%;
+}
+
+.related-items .more {
+    align-items: center;
+    background-color: #ededed;
+    border-radius: 93px;
+    color: #787878;
+    cursor: pointer;
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+    height: 65px;
+    justify-content: center;
+    margin: 15px auto;
+    transition: .5s;
+    border: none;
+    width: 238px;
+    outline: none;
+}
+
+.related-items .more:hover {
+    background-color: #171717;
+    color: white;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+
+/* Start Responsive */
+
+@media (max-width: 700px) {
+
+    .related-items h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .related-items hr {
+        width: 56%;
+        padding: 1.5px;
+        max-width: 251px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .related-items h1 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .related-items hr {
+        width: 50%;
+        padding: 1px;
+        max-width: 200px;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .related-items {
+        margin: 50px 0;
+    }
+
+    .related-items .related-item {
+        grid-template-columns: auto;
+        width: 100%;
+    }
+
+    .related-item .item {
+        width: 100%;
+    }
+
+    .related-items .more {
+        font-size: 17px;
+        height: 50px;
+        width: 180px;
+        margin: 0;
+    }
+
+}
+
+
+/* End Responsive */

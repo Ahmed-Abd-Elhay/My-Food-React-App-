@@ -1,0 +1,62 @@
+.popular {
+    margin: 81px auto;
+    width: 95%;
+    text-align: center;
+}
+
+.popular h1 {
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    color: #ff4a0e;
+}
+
+.popular h1::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    background: #111519;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.popular .popular-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 320px);
+    gap: 30px;
+    justify-content: center;
+    margin: 80px auto;
+    width: 95%;
+}
+
+
+/* Start Responsive */
+
+@media (max-width: 450px) {
+    .popular h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 350px) {
+    .popular h1 {
+        font-size: 27px;
+    }
+
+    .popular .popular-container {
+        grid-template-columns: auto;
+        width: 100%;
+    }
+
+    .popular .popular-container .item {
+        width: 100%;
+    }
+}
+
+/* End Responsive */

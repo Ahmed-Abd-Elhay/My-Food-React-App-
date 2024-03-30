@@ -1,0 +1,362 @@
+.landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 93vh;
+    padding: 20px;
+    width: 100%;
+    background-image: url("../Assets/bacground-0.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+.landing .info {
+    width: 548px;
+    animation: fedIn 3s;
+    -webkit-animation: fedIn 3s;
+}
+
+.landing .info span {
+    color: white;
+    font-size: 51px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.landing .info h1 {
+    font-size: 110px;
+    font-weight: 900;
+    color: white;
+    margin: 4px 0;
+    text-transform: uppercase;
+}
+
+.landing .info p {
+    color: white;
+    font-size: 20px;
+    line-height: 01.6;
+}
+
+.landing .info button {
+    width: 312px;
+    height: 81px;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(45deg, #ff2814, #ff6f07);
+    border: none;
+    outline: none;
+    border-radius: 65px;
+    margin: 51px 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s;
+    animation: moveToRight 1s ease-out;
+    -webkit-animation: moveToRight 1s ease-out;
+}
+
+.landing .info button:hover {
+    background-color: var(--main-color);
+    transform: scale(1.05);
+}
+
+.landing .main-info {
+    position: relative;
+    width: 450px;
+}
+
+.landing .main-info .cart-info {
+    background: linear-gradient(45deg, #ff6202, #ff6a00, #df8200, #c97500);
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 11px 20px;
+    border-radius: 15px 29px 0px 15px;
+    position: absolute;
+    top: -17px;
+    left: -190px;
+    color: white;
+    animation: change-scale 1.3s ease-out;
+    -webkit-animation: change-scale 1.3s ease-out;
+}
+
+.landing .main-info .main-image {
+    animation: full-turn 50s infinite linear;
+    -webkit-animation: full-turn 50s infinite linear;
+}
+
+.landing .main-info .main-image img {
+    width: 100%;
+}
+
+.landing .main-info .info-name {
+    background: linear-gradient(45deg, #ff1a1a, #ff9604);
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 11px 21px;
+    border-radius: 2px 15px 15px 34px;
+    position: absolute;
+    bottom: -17px;
+    right: 0;
+    color: white;
+    animation: change-scale 1.3s ease-out;
+    -webkit-animation: change-scale 1.3s ease-out;
+}
+
+
+
+@keyframes full-turn {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+
+/* Start Responsive */
+
+@media (max-width: 1200px) {
+    .landing .info {
+        width: 450px;
+    }
+
+    .landing .info span {
+        font-size: 40px;
+    }
+
+    .landing .info h1 {
+        font-size: 93px;
+    }
+
+    .landing .info p {
+        font-size: 18px;
+    }
+
+    .landing .main-info {
+        width: 350px;
+    }
+
+    .landing .main-info .cart-info {
+        top: -45px;
+        left: -70px;
+    }
+
+    .landing .main-info .info-name {
+        bottom: -30px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .landing {
+        flex-direction: column-reverse;
+        height: 100vh;
+        justify-content: center;
+        gap: 70px;
+    }
+
+    .landing .info {
+        width: 450px;
+    }
+
+    .landing .info span {
+        font-size: 36px;
+    }
+
+    .landing .info h1 {
+        font-size: 90px;
+        margin: 0 0;
+        color: #ff560f;
+    }
+
+    .landing .info p {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    .landing .info button {
+        width: 260px;
+        height: 72px;
+        font-size: 26px;
+        margin: 30px 0 0;
+    }
+
+    .landing .main-info {
+        width: 350px;
+    }
+
+    .landing .main-info .cart-info {
+        top: -40px;
+        left: -150px;
+    }
+
+
+    .landing .main-info .main-image img {
+        width: 100%;
+    }
+
+    .landing .main-info .info-name {
+        bottom: -22px;
+        right: -30px;
+        font-size: 18px;
+        padding: 11px 24px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .landing {
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+
+    .landing .info {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .landing .info span {
+        font-size: 30px;
+    }
+
+    .landing .info h1 {
+        font-size: 75px;
+    }
+
+    .landing .info p {
+        font-size: 16px;
+    }
+
+    .landing .info button {
+        width: 250px;
+        height: 65px;
+        font-size: 25px;
+    }
+
+    .landing .main-info {
+        width: 300px;
+    }
+
+    .landing .main-info .cart-info {
+        top: -40px;
+        left: -35px;
+        font-size: 12px;
+    }
+
+
+    .landing .main-image img {
+        width: 100%;
+    }
+
+    .landing .main-info .info-name {
+        right: -15px;
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .landing {
+        flex-direction: column-reverse;
+        height: 100vh;
+        justify-content: center;
+        gap: 70px;
+    }
+
+    .landing .info {
+        width: 100%;
+    }
+
+    .landing .info span {
+        font-size: 22px;
+    }
+
+    .landing .info h1 {
+        font-size: 50px;
+    }
+
+    .landing .info p {
+        font-size: 14px;
+    }
+
+    .landing .info button {
+        width: 230px;
+        height: 60px;
+        font-size: 23px;
+        margin: 35px 0 0;
+    }
+
+    .landing .main-info {
+        width: 90%;
+    }
+
+    .landing .main-info .cart-info {
+        top: -34px;
+        left: -17px;
+        font-size: 10px;
+    }
+
+    .landing .main-image img {
+        width: 100%;
+    }
+
+    .landing .main-info .info-name {
+        right: 0px;
+        bottom: -38px;
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 300px) {
+
+    .landing .info span {
+        font-size: 20px;
+    }
+
+    .landing .info h1 {
+        font-size: 40px;
+    }
+
+    .landing .info p {
+        font-size: 12px;
+    }
+
+    .landing .info button {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+        margin: 20px 0 0;
+    }
+
+    .landing .main-info .cart-info {
+        top: -35px;
+        left: -8px;
+        font-size: 10px;
+    }
+
+
+    .landing .main-image img {
+        width: 250px;
+    }
+
+    .landing .main-info .info-name {
+        right: 0px;
+        bottom: -32px;
+        font-size: 13px;
+    }
+
+}
+
+/* End Responsive */

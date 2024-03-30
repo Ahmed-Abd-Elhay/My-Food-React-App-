@@ -1,0 +1,395 @@
+.header {
+    background-image: url("../Assets/bacground-header.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 18px 0;
+}
+
+.header .logo {
+    font-size: 40px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.header .logo:hover {
+    transform: scale(1.05);
+}
+
+.header .logo .link {
+    text-decoration: none;
+    color: #ff5804;
+}
+
+.header .links {
+    display: flex;
+    gap: 15px;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.header .links .link {
+    text-decoration: none;
+}
+
+.header .links li {
+    color: #b5b5b5;
+    padding: 10px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.header .links li:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+.header .signin-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header .signin-card button {
+    border: none;
+    outline: none;
+    border-radius: 80px;
+    font-size: 19px;
+    font-weight: 500;
+    color: white;
+    background: linear-gradient(45deg, #ff1e14, #ff5904);
+    cursor: pointer;
+    transition: .3s;
+    width: 100px;
+    height: 40px;
+}
+
+.header .signin-card button:hover {
+    transform: scale(1.05);
+}
+
+.header .signin-card .card-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header .signin-card .card-icon img {
+    width: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.header .signin-card .card-icon img:hover {
+    transform: scale(1.05);
+}
+
+.header .signin-card .card-icon .cart-number {
+    width: 20px;
+    height: 21px;
+    background: #ff5804;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: -4px;
+    right: -8px;
+    font-size: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* Start Burger Icon */
+
+.header .burger-icon {
+    display: none;
+    position: relative;
+}
+
+.header .burger-icon .icon {
+    width: 60px;
+    height: 46px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 36px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.header .burger-icon .icon div {
+    width: 100%;
+    background-color: white;
+    height: 7px;
+    border-radius: 54px;
+}
+
+.header .burger-icon .close .first {
+    transform: rotate(45deg) translate(5px, 17px);
+    transition: ease-in-out .3s;
+}
+
+
+.header .burger-icon .close .second {
+    display: none;
+}
+
+.header .burger-icon .close .last {
+    transform: rotate(135deg) translate(1px, 12px);
+    transition: ease-out .3s;
+}
+
+.header .burger-icon .icon:hover {
+    transform: scale(1.06);
+}
+
+.header .burger-icon {
+    display: none;
+}
+
+.header .overflow {
+    position: absolute;
+    top: -600px;
+    left: -40px;
+    background: rgb(34 38 41);
+    width: 200px;
+    height: 350px;
+    border-radius: 10PX;
+    transition: .4s;
+    z-index: 99;
+}
+
+.header .overflow.checked {
+    top: 67px;
+}
+
+.header .overflow .burger-links {
+    display: none;
+}
+
+.header .checked .burger-links {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 22px;
+}
+
+.header .checked .burger-links .link li {
+    color: #b5b5b5;
+    padding: 18px 0;
+    transition: .3s;
+    cursor: pointer;
+    position: relative;
+}
+
+/* 
+.header .checked .burger-icon hr {
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.701);
+} */
+
+.header .checked .burger-links .link:not(:last-child)::after {
+    content: "";
+    width: 95%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.701);
+    transform: translate(-50%, -50%);
+    border-radius: 33px;
+}
+
+.header .checked .burger-links li:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+/* End Burger Icon */
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    height: 100%;
+}
+
+/* Start Responsive Header */
+
+@media (max-width: 1000px) {
+    .header .links {
+        display: none;
+    }
+
+    .header .burger-icon {
+        display: block;
+    }
+
+}
+
+@media (max-width: 720px) {
+    .header .links {
+        display: none;
+    }
+
+    .header .burger-icon {
+        display: block;
+    }
+
+    .header .logo {
+        font-size: 30px;
+    }
+
+    .header .signin-card {
+        gap: 10px;
+    }
+
+    .header .signin-card button {
+        font-size: 16px;
+        width: 80px;
+        height: 35px;
+    }
+
+    .header .signin-card .card-icon img {
+        width: 40px;
+    }
+
+    .header .signin-card .card-icon .cart-number {
+        width: 15px;
+        height: 16px;
+        font-size: 12px;
+    }
+
+    .header .burger-icon .icon {
+        width: 46px;
+        height: 34px;
+        margin-left: 15px;
+    }
+
+    .header .burger-icon .icon div {
+        height: 5px;
+    }
+
+
+    .header .burger-icon .close .first {
+        transform: rotate(45deg) translate(2px, 9px);
+    }
+
+    .header .burger-icon .close .last {
+        transform: rotate(135deg) translate(-3px, 10px);
+    }
+
+    .header .overflow {
+        position: fixed;
+        top: 80px;
+        left: 900px;
+        background: rgb(43, 42, 42);
+        width: 100%;
+        height: 93vh;
+        border-radius: 10PX;
+        transition: .4s;
+    }
+
+    .header .overflow.checked {
+        left: 0;
+    }
+
+    .header .checked .burger-links {
+        justify-content: unset;
+        font-size: 25px;
+    }
+
+    .header .checked .burger-links .link li {
+        color: #b5b5b5;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header .checked .burger-links .link li:hover {
+        transform: scale(1.05);
+        color: white;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+    .header .links {
+        display: none;
+    }
+
+    .header .burger-icon {
+        display: block;
+    }
+
+    .header .logo {
+        font-size: 22px;
+    }
+
+    .header .signin-card {
+        gap: 10px;
+    }
+
+    .header .signin-card button {
+        font-size: 13px;
+        width: 60px;
+        height: 25px;
+    }
+
+    .header .signin-card .card-icon img {
+        width: 30px;
+    }
+
+    .header .signin-card .card-icon .cart-number {
+        width: 14px;
+        height: 15px;
+        font-size: 10px;
+    }
+
+    .header .burger-icon .icon {
+        width: 28px;
+        height: 21px;
+        margin-left: 10px;
+    }
+
+    .header .burger-icon .icon div {
+        height: 3px;
+    }
+
+    .header .burger-icon .close .first {
+        transform: rotate(45deg) translate(2px, 9px);
+    }
+
+    .header .burger-icon .close .last {
+        transform: rotate(135deg) translate(1px, 5px);
+    }
+
+    .header .overflow {
+        position: fixed;
+        left: 600px;
+        background: rgb(43, 42, 42);
+        width: 100%;
+        height: 93vh;
+        border-radius: 10PX;
+        transition: .4s;
+    }
+
+    .header .overflow.checked {
+        left: 0;
+    }
+
+}
+
+/* End Responsive Header */

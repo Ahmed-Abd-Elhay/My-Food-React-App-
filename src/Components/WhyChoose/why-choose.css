@@ -1,0 +1,130 @@
+.why-choose {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(3435deg, #12161c, #284861);
+    margin: 100px 0 80px;
+}
+
+.why-choose .container {
+    width: 60%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.why-choose .image {
+    width: 400px;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.why-choose .image img {
+    max-width: 100%;
+}
+
+.why-choose .info {
+    width: fit-content;
+}
+
+.why-choose .info h1 {
+    width: fit-content;
+    font-size: 45px;
+    font-weight: 700;
+    color: #d9830a;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.why-choose .info h1::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #6d6d6d;
+    border-radius: 10px;
+}
+
+.why-choose .info p {
+    line-height: 1.6;
+    font-size: 26px;
+    color: #ebebeb;
+    width: 100%;
+}
+
+
+
+/* Start Responsive */
+
+@media (max-width: 1200px) {
+    .why-choose .container {
+        width: 85%;
+        margin: 40px auto;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .why-choose .image {
+        width: 350px;
+    }
+
+    .why-choose .info h1 {
+        font-size: 30px;
+    }
+
+    .why-choose .info p {
+        line-height: 1.5;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .why-choose .container {
+        width: 90%;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .why-choose .image {
+        width: 250px;
+        margin: 0;
+    }
+
+    .why-choose .info h1 {
+        font-size: 28px;
+    }
+
+    .why-choose .info p {
+        line-height: 1.5;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    .why-choose .container {
+        width: 95%;
+        gap: 15px;
+    }
+
+    .why-choose .image {
+        width: 180px;
+    }
+
+    .why-choose .info h1 {
+        font-size: 23px;
+    }
+
+    .why-choose .info p {
+        line-height: 1.5;
+        font-size: 14px;
+    }
+}
+
+/* End Responsive */

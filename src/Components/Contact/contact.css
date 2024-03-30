@@ -1,0 +1,268 @@
+.contact {
+    position: relative;
+    margin: 150px 0;
+    padding: 20px;
+    background-image: url("../Assets/ketchen-with-chefs-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* height: 80vh; */
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f202ad9;
+}
+
+.contact h1 {
+    text-align: center;
+    margin: 30px auto 70px;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: #d9830a;
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.contact h1::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    background: #d9d9d9;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.contact .container {
+    display: flex;
+    margin: 60px 0;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 70px;
+    position: relative;
+}
+
+.contact .container .info {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+
+.contact .container .info h3 {
+    width: fit-content;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+}
+
+.contact .container .info h3::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #8b8b8b;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.contact .container .info div {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact .container .info p {
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.contact .container .info img {
+    width: 60px;
+    cursor: pointer;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.contact .container .info img:hover {
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+}
+
+.contact .container .get-in-toch {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 0px 11px 5px #00000052;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    width: 450px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.contact .container .get-in-toch h3 {
+    font-size: 24px;
+    margin: 10px;
+    color: #002867;
+}
+
+.contact .container .get-in-toch form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 95%;
+    margin: 20px auto 15px;
+}
+
+.contact .container .get-in-toch form input {
+    border: none;
+    outline: none;
+    background-color: #e5e5e5;
+    padding: 15px;
+    color: #ff9400;
+    font-size: 18px;
+}
+
+.contact .container .get-in-toch form textarea {
+    border: none;
+    outline: none;
+    background-color: #e5e5e5;
+    padding: 11px;
+    color: #ff9400;
+    width: 100%;
+    height: 170px;
+    font-size: 18px;
+}
+
+.contact .container .get-in-toch form .button {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    background: linear-gradient(45deg, #ff2e13, #ff7e04);
+    cursor: pointer;
+    transition: .4s;
+}
+
+.contact .container .get-in-toch form .button:hover {
+    transform: scale(.98);
+    -webkit-transform: scale(.98);
+    -moz-transform: scale(.98);
+    -ms-transform: scale(.98);
+    -o-transform: scale(.98);
+}
+
+
+/* Start Responsive */
+
+@media (max-width: 900px) {
+
+    .contact {
+        margin: 100px 0;
+    }
+
+    .contact .container {
+        gap: 50px;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .contact .container .info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .contact .container .info h3 {
+        color: #ffca00;
+    }
+
+    .contact .container .info img {
+        width: 40px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .contact {
+        margin: 50px 0;
+    }
+
+    .contact h1 {
+        font-size: 35px;
+    }
+
+    .contact .container .info {
+        text-align: center;
+    }
+
+    .contact .container .info h3 {
+        font-size: 25px;
+    }
+
+    .contact .container .info .address {
+        margin-top: 15px;
+    }
+
+    .contact .container .info p {
+        font-size: 15px;
+    }
+
+    .contact .container .get-in-toch {
+        width: 100%;
+    }
+
+    .contact .container .get-in-toch form {
+        width: 100%;
+    }
+
+    .contact .container .get-in-toch h3 {
+        font-size: 20px;
+    }
+
+    .contact .container .get-in-toch form input {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .contact .container .get-in-toch form textarea {
+        font-size: 15px;
+        padding: 10px;
+        height: 150px;
+    }
+
+    .contact .container .get-in-toch form .button {
+        font-size: 18px;
+    }
+
+    .contact .container .info img {
+        width: 30px;
+    }
+}
+
+/* End Responsive */

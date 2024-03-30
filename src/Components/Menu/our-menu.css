@@ -1,0 +1,41 @@
+.our-menu .item-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 320px);
+    gap: 30px;
+    justify-content: center;
+    margin: 70px auto;
+    width: 90%;
+}
+
+
+/* Start Responsive */
+
+@media (max-width: 700px) {
+
+    .our-menu .item-container {
+        margin: 40px auto;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .our-menu .item-container {
+        margin: 30px auto;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .our-menu .item-container {
+        grid-template-columns: auto;
+        width: 100%;
+    }
+
+    .our-menu .item-container .item {
+        width: 100%;
+    }
+}
+
+/* End Responsive */

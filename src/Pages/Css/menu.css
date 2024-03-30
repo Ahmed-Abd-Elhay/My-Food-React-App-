@@ -1,0 +1,113 @@
+.menu .land {
+    width: 100%;
+    background-image: url("../../Components/Assets/bacground-0.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 50px 50px;
+}
+
+.menu .land h1 {
+    animation: fedIn 3s;
+    -webkit-animation: fedIn 3s;
+    font-size: 70px;
+}
+
+.menu .container {
+    margin: 70px auto;
+}
+
+.menu .container .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu .container .buttons button {
+    outline: none;
+    width: 135px;
+    height: 60px;
+    color: #ff6700;
+    background: #ffffff;
+    font-size: 24px;
+    border-radius: 10px;
+    border: 1px solid #ff7c00;
+    cursor: pointer;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.menu .container .buttons button.active {
+    background: linear-gradient(117deg, red, #ff9400);
+    color: white;
+}
+
+
+
+/* Start Responsive */
+
+@media (max-width: 700px) {
+
+    .menu .container {
+        margin: 40px auto;
+    }
+
+    .menu .land {
+        height: 160px;
+    }
+
+    .menu .land h1 {
+        font-size: 40px;
+    }
+
+    .menu .container .buttons {
+        gap: 10px;
+    }
+
+    .menu .container .buttons button {
+        width: 110px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .menu .container {
+        margin: 30px auto;
+    }
+
+    .menu .land h1 {
+        font-size: 35px;
+    }
+
+    .menu .container .buttons {
+        gap: 7px;
+    }
+
+    .menu .container .buttons button {
+        width: 80px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 350px) {
+    .menu .land h1 {
+        font-size: 27px;
+    }
+}
+
+/* End Responsive */
